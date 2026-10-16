@@ -1,0 +1,32 @@
+# Secrets: never commit (public repo, ADR-0001f)
+.env
+.env.*
+!.env.example
+local.settings.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Azure Functions / Azurite
+bin/
+obj/
+.python_packages/
+__azurite_db_*.json
+__blobstorage__/
+__queuestorage__/
+azurite/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
