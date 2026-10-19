@@ -30,3 +30,6 @@ azurite/
 .vscode/
 .idea/
 .DS_Store
+
+# Build output
+dist/
