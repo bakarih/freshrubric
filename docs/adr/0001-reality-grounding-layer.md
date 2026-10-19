@@ -1,6 +1,6 @@
 # ADR-0001: Reality-grounding layer for SpectrumHire's generators
 
-- **Status:** Accepted
+- **Status:** Accepted. Hosting plan amended by [ADR-0004](0004-flex-consumption-hosting.md).
 - **Date:** 2026-07-29 (ADR-0001i added 2026-07-31)
 - **Deciders:** Bakari Holmes
 
@@ -41,6 +41,8 @@ Land raw and normalized postings in **Azure Blob Storage** as JSON. An **Azure A
 
 Timer-triggered functions for scheduled ingestion; an HTTP-triggered function for the grounded-generation endpoint.
 
+*Amended by [ADR-0004](0004-flex-consumption-hosting.md): the Function App runs on the Flex Consumption plan.*
+
 ### ADR-0001d: RAG implementation: LangChain, deliberately
 
 Use LangChain for the retrieval and generation chain. Use LangGraph only if a real multi-step control-flow need appears, not preemptively.
@@ -71,7 +73,7 @@ Azure Budgets are alerts only. Per Microsoft's docs, resources aren't affected a
 |---|---|---|
 | AI Search | Free (F0) | $0, hard-capped (50 MB, 3 indexes) |
 | Blob Storage | Standard | Pennies at this scale |
-| Azure Functions | Consumption plan | Within the monthly free grant |
+| Azure Functions | Flex Consumption plan, on-demand ([ADR-0004](0004-flex-consumption-hosting.md)) | Within the monthly free grant |
 | Application Insights | Free data allowance | $0 at this scale |
 | Key Vault | Pay per operation | Fractions of a cent |
 
