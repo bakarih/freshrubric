@@ -20,7 +20,7 @@ Rules for AI coding assistants (Claude Code, Copilot, Codex, and others) working
 
 If a new dependency, naming convention, test boundary, or other choice comes up that isn't covered by an ADR or an explicit instruction: **stop and raise it for a planning decision.** Do not decide it inline while coding.
 
-Coding style and linting rules are deliberately undecided until Milestone 0. Do not pick defaults on your own.
+Coding style, linting, and tooling are decided in [ADR-0003](docs/adr/0003-python-toolchain-and-conventions.md). Follow it. Anything it doesn't cover goes back to planning; do not pick defaults on your own.
 
 ## Ground rules
 

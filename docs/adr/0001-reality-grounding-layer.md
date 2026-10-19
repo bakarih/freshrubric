@@ -127,4 +127,4 @@ Coding style and linting rules are deliberately left open here, to be decided in
 
 ## Open questions
 
-None on architecture or scope. Coding style and linting rules are decided in planning at Milestone 0.
+None on architecture or scope. Coding style and linting rules were decided at Milestone 0 in [ADR-0003](0003-python-toolchain-and-conventions.md).
