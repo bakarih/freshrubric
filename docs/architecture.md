@@ -71,7 +71,7 @@ graph TB
     subgraph RG["Resource group"]
         ST[("Storage account<br/>Blob container")]
         AIS["AI Search<br/>(Free tier, hard-capped)"]
-        FA["Function App<br/>(Consumption plan)<br/>timer + HTTP triggers"]
+        FA["Function App<br/>(Flex Consumption plan)<br/>timer + HTTP triggers"]
         AOAI["Azure OpenAI<br/>+ deployment-level TPM quota"]
         KV["Key Vault<br/>secrets"]
         AI["Application Insights<br/>logs + telemetry"]
