@@ -1,0 +1,51 @@
+# Hooks run through `uv run`, so their versions come from uv.lock (ADR-0003d).
+# gitleaks is the one exception: it's pinned to a release below.
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: uv run --frozen ruff check --fix --force-exclude
+        language: unsupported
+        types_or: [python, pyi]
+        require_serial: true
+      - id: ruff-format
+        name: ruff format
+        entry: uv run --frozen ruff format --force-exclude
+        language: unsupported
+        types_or: [python, pyi]
+        require_serial: true
+      - id: check-added-large-files
+        name: check for added large files
+        entry: uv run --frozen check-added-large-files
+        language: unsupported
+      - id: check-toml
+        name: check toml
+        entry: uv run --frozen check-toml
+        language: unsupported
+        types: [toml]
+      - id: check-yaml
+        name: check yaml
+        entry: uv run --frozen check-yaml
+        language: unsupported
+        types: [yaml]
+      - id: detect-private-key
+        name: detect private key
+        entry: uv run --frozen detect-private-key
+        language: unsupported
+        types: [text]
+      - id: end-of-file-fixer
+        name: fix end of files
+        entry: uv run --frozen end-of-file-fixer
+        language: unsupported
+        types: [text]
+      - id: trailing-whitespace
+        name: trim trailing whitespace
+        entry: uv run --frozen trailing-whitespace-fixer
+        language: unsupported
+        types: [text]
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
