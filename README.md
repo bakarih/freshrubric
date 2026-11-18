@@ -44,6 +44,7 @@ Python · Azure Functions · Azure Blob Storage · Azure AI Search · Azure Open
 - [Architecture walkthrough](docs/architecture.md)
 - [Roadmap](docs/roadmap.md)
 - [Architecture Decision Records](docs/adr/README.md)
+- [Agent rules: where each AI instruction lives and when it loads](docs/agent-rules.md)
 
 ## License
 
