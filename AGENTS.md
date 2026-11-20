@@ -28,3 +28,7 @@ Coding style, linting, and tooling are decided in [ADR-0003](docs/adr/0003-pytho
 - **Don't re-open decided architecture** without a planning conversation. The decisions are in `docs/adr/`.
 - **Keep the README honest.** Only describe something as built once it is in this repo.
 - **Write an ADR** (`docs/adr/000N-title.md`, with Status / Context / Decision / Consequences) for any new load-bearing dependency, new Azure resource type, reversal of a prior ADR, or real tradeoff pause. Skip it for naming, version bumps, and routine files. Link each new ADR from `docs/adr/README.md`.
+
+## Area rules
+
+Short, area-specific rules live in [`.claude/rules/`](.claude/rules/), one Markdown file per area. Each file's `paths:` frontmatter lists the files it covers. Claude Code loads them automatically; any other agent should read the matching file before editing in that area. They only restate decisions already in `docs/adr/`. [docs/agent-rules.md](docs/agent-rules.md) maps every rule file: where it lives, who reads it, and when.
